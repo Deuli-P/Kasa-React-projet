@@ -1,0 +1,73 @@
+// VARIABLES
+
+$main-color : #FF6060 ;
+$secondary-color: #FFF;
+$text-color: #FF6060 ;
+$text-color-footer: #FFF ;
+$bg-primary-color: #FFF;
+$bg-secondary-color: #F6F6F6;
+$btn-color: #FFF;
+
+
+//FONT
+$font-text: 'Montserrat';
+$font-size-header-footer : clamp(12px,4vw,24px);
+$font-size-article : 18px;
+$font-size-banner:clamp(24px,4vw, 48px);
+
+// DIMENSIONS 
+$min-width:375;
+$max-width:1440;
+$mid-width:768;
+$dimension-taille: calc(1440 / 375);
+$dimension-vw: calc(100vw - 375px);
+//climp = (valeur mini , calc(valeur mini + calc(( valeur max - valeur mini) / ( taille max - taille mini)) * ( 100vw - taille mini)), valeur max)
+//climp = climp(valeur mini , calc(valeur mini + calc(( valeur max - valeur mini) / $dimension-taille) * $dimension-vw), valeur max)
+// MIXINS
+
+@mixin names {
+
+}
+
+@mixin name {
+
+}
+
+
+// BASE 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    background-color: $bg-primary-color;
+    font-family: $font-text;
+}
+ul li{
+    list-style: none;
+}
+a,a:visited{
+    text-decoration: none;
+}
+
+
+// ANIMATION 
+
+@keyframes opacityUpAnimation {
+    from {opacity: 0;}
+    to{opacity: 1;}
+};
+
+@keyframes opacityDownAnimation {
+    from {opacity: 1;}
+    to{opacity: 0;}
+};
+
+@keyframes slideAnimation {
+    
+};
