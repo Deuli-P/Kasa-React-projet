@@ -1,6 +1,6 @@
 
 
-const Banner = () => {
+const BannerHome = () => {
     return (
         <>
             <div id="banner-content">
@@ -13,4 +13,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default BannerHome;

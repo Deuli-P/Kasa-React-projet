@@ -15,14 +15,13 @@ $font-size-header-footer : clamp(12px,4vw,24px);
 $font-size-article : 18px;
 $font-size-banner:clamp(24px,4vw, 48px);
 
-// DIMENSIONS 
-$min-width:375;
-$max-width:1440;
-$mid-width:768;
-$dimension-taille: calc(1440 / 375);
-$dimension-vw: calc(100vw - 375px);
-//climp = (valeur mini , calc(valeur mini + calc(( valeur max - valeur mini) / ( taille max - taille mini)) * ( 100vw - taille mini)), valeur max)
-//climp = climp(valeur mini , calc(valeur mini + calc(( valeur max - valeur mini) / $dimension-taille) * $dimension-vw), valeur max)
+
+// FUNCTION 
+
+// @function clamping($min , $max , $Wmin ,$Wmax){
+//     $clamp: clamp($min px, calc($min px + calc(($max - $min) / ($Wmax - $Wmin)) * (100vw - $min px)), $max px );
+//     @return $clamp;
+// }
 // MIXINS
 
 @mixin names {
@@ -71,3 +70,4 @@ a,a:visited{
 @keyframes slideAnimation {
     
 };
+
