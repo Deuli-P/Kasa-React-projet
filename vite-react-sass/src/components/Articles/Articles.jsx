@@ -1,11 +1,8 @@
 import AxiosLogement from '../AxiosLogement/AxiosLogement'
 
-
-
 const Articles = () => {
 
     const Data = AxiosLogement();
-
 
     return (
         <>

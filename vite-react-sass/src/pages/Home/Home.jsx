@@ -1,13 +1,9 @@
-
 import BannerHome from "../../components/BannerHome/BannerHome";
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
 import Articles from "../../components/Articles/Articles";
 
 const Home = () => {
     return (
         <>
-            <Header />
             <main id="main-home">
             <div className="main-containers" id="main-home-banner">
                 <BannerHome />
@@ -16,7 +12,6 @@ const Home = () => {
                 <Articles />
             </div>
             </main>
-            <Footer />
         </>
     );
 };

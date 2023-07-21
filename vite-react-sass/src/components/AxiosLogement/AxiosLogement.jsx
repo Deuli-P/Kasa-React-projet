@@ -19,7 +19,6 @@ const AxiosLogement = () => {
     fetchData();
   }, []);
 
-  // Vous pouvez également retourner les données récupérées ici
   return collaps;
 };
 
