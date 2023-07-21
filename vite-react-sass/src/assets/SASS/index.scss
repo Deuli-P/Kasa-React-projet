@@ -94,6 +94,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 5%;
     #main-home-banner{
         width: 100%;
@@ -174,7 +175,8 @@ footer{
         left: 0;
         margin: 15px 20px;
         z-index: 3;
-
+        overflow-wrap: normal;
+        width: 150px;
         h3 {
             margin: 0;
             color: white;
@@ -200,9 +202,10 @@ footer{
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        overflow: hidden;
         border-radius: clamp(10px, calc(10px + calc((25 - 10) / (1440 - 375)) * (100vw - 375px)), 25px);
         margin-top: clamp(19px, calc(19px + calc((38 - 19) / (1440 - 375)) * (100vw - 375px)), 38px);
-        margin-bottom: clamp(19px, calc(19px + calc((38 - 19) / (1440 - 375)) * (100vw - 375px)), 38px);
+        margin-bottom: clamp(19px, calc(19px + calc((8 - 19) / (1440 - 375)) * (100vw - 375px)), 8px);
         .blendMode {
             background-color: black;
             width: 100%;
@@ -210,7 +213,62 @@ footer{
             opacity: 0.3
         }
     }
+    &-collapse {
+        width: 100%;
+        padding-left: clamp(0%, calc(0% + calc((50 - 0) / (1440 - 375)) * (100vw - 375px)), 50%);;
+        padding-right: clamp(0%, calc(0% + calc((50 - 0) / (1440 - 375)) * (100vw - 375px)), 50%);;
+    }
 }
+
+.collapse{
+    &-container {
+        width: 100% ;
+        margin-bottom: clamp(19px, calc(19px + calc((38 - 19) / (1440 - 375)) * (100vw - 375px)), 38px);
+    }
+    &-box-title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $main-color;
+        border-radius: 5px;
+        margin-top: clamp(20px, calc(20px + calc((30 - 20) / (1440 - 375)) * (100vw - 375px)), 30px);
+        padding: 10px clamp(10px, calc(10px + calc((20 - 10) / (1440 - 375)) * (100vw - 375px)), 20px);
+        color: white;
+        border: none;
+        .collapse-title{
+            font-size: $font-size-collapse-title;
+            font-weight: 500;
+            line-height: 142.6%;
+            }
+        .collapse-chevron-box{
+            width: clamp(20px, calc(20px + calc((32 - 20) / (1440 - 375)) * (100vw - 375px)), 32px);
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg{
+                color: white;
+                width: 100%;
+                height: 100%;
+                transform: rotate(180deg);
+             }
+        }
+    }
+    &-box-content-container {
+        width: 100%;
+        background-color: $bg-secondary-color;
+        border-radius: 0px 0px 5px 5px;
+        color: $main-color;
+        height: 0px;
+        overflow: hidden;
+        transition: height ease 0.9s;
+        .collapse-box-text-content {
+            padding: 10px;
+        }
+    }
+}
+
 /* ======================================================================= */
                               /* 404 */
 /* ======================================================================= */
@@ -220,6 +278,43 @@ footer{
                             /* LOCATIONS */
 /* ======================================================================= */
 
+
+/* ======================================================================= */
+                           /* TEST COLLAPSE */
+/* ======================================================================= */
+#main-about-collapse{
+    .toggle {
+        text-align: center;
+        border: none;
+        padding: 10px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background: $main-color;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    hr {
+        border: white 1px solid;
+    }
+    .content {
+        background-color: $bg-secondary-color;
+        border-radius: 0px 0px 5px 5px;
+        padding: 10px;
+        border-radius: 5px;
+    } 
+    .content-parent {
+        height: 0px;
+        overflow: hidden;
+        transition: height ease 0.9s;
+    }
+        
+    .content-show {
+        height: 200px;
+    }
+}
 
 /* ======================================================================= */
                            /* MEDIA QUERY */

@@ -1,20 +1,15 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import AxiosLogement from '../AxiosLogement/AxiosLogement'
+
 
 
 const Articles = () => {
-    // eslint-disable-next-line no-unused-vars
-    const [data, setData] = useState([]);
 
-    useEffect(()=> {
-        axios
-            .get('../src/assets/images/image.json')
-            .then((res)=> setData(res.data));
-    },[])
+    const Data = AxiosLogement();
+
 
     return (
         <>
-        {data.map((element) => (
+        {Data.map((element) => (
                  <article className="article-location" key= {element.id}>
                     <div className="box-shadow"></div>
                     <img src={element.cover} alt={element.title} />

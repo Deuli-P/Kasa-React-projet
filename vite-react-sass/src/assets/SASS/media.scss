@@ -33,8 +33,7 @@
         #main-article-box {
             background: $bg-secondary-color;
             flex-direction: row;
-            justify-content: space-between;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
             height: auto;
         }
@@ -58,6 +57,12 @@
         #footer-copyright {
             flex-direction: row;
         }
+    }
+    #main-home{
+        #main-article-box {
+            justify-content: space-between;
+            align-items: space-between;
+    }
     }
 }
 
