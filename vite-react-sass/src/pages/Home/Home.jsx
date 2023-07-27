@@ -1,7 +1,8 @@
 import BannerHome from "../../components/BannerHome/BannerHome";
 import Articles from "../../components/Articles/Articles";
+import { Link } from "react-router-dom";
 
-const Home = () => {
+function Home({ data }) {
     return (
         <>
             <main id="main-home">
@@ -9,11 +10,15 @@ const Home = () => {
                 <BannerHome />
             </div>
             <div className="main-containers" id="main-article-box">
-                <Articles />
+                {data.map(item => (
+                <Link key={item.id} to={`/logement/${item.id}`}>
+                <Articles title ={item.title} cover = {item.cover}/>
+                </Link>
+                ))}
             </div>
             </main>
         </>
     );
-};
+}
 
 export default Home;

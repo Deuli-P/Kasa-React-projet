@@ -1,20 +1,13 @@
-import AxiosLogement from '../AxiosLogement/AxiosLogement'
-
-const Articles = () => {
-
-    const Data = AxiosLogement();
-
+const Articles = ({title, cover}) => {
     return (
         <>
-        {Data.map((element) => (
-                 <article className="article-location" key= {element.id}>
+                 <article className="article-location">
                     <div className="box-shadow"></div>
-                    <img src={element.cover} alt={element.title} />
+                    <img src={cover} alt={title} />
                     <div className="article-location-text">
-                        <h3>{element.title}</h3>
+                        <h3>{title}</h3>
                     </div>
                 </article> 
-        ))}
         </>
     );
 };

@@ -52,6 +52,7 @@
             }
         }
     }
+
 }
 /* ======================================================================= */
                     /* 768 PX */
@@ -70,6 +71,22 @@
             justify-content: space-between;
             align-items: space-between;
     }
+    }
+    #logement-content-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #logement-content-title-tags {
+        width: auto;
+    }
+    #logement-content-host-rating {
+        flex-direction: column;
+        width: auto;
+
+    }
+    #logement-collapse-container{
+        justify-content: space-between;
     }
 }
 
