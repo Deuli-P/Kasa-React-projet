@@ -1,12 +1,15 @@
 import { useRef, useEffect } from 'react';
 import { register } from 'swiper/element/bundle';
-
+import '../SlideShow/swiper.css';
 
 
 register();
 
+
+
 const MyComponent = ({ pictures }) => {
   const swiperElRef = useRef(null);
+
 
   useEffect(() => {
     // listen for Swiper events using addEventListener
@@ -24,11 +27,20 @@ const MyComponent = ({ pictures }) => {
     <swiper-container
       ref={swiperElRef}
       slides-per-view="1"
-      navigation="true"
+      navigation= "true"
       pagination
       pagination-type='fraction'
       id="slide-show"
       loop ="true"
+      className="slider-container-box"
+
+      style={{
+        "--swiper-pagination-color": "#FFBA08",
+        "--swiper-pagination-bullet-inactive-color": "#999999",
+        "--swiper-pagination-bullet-inactive-opacity": "1",
+        "--swiper-pagination-bullet-size": "16px",
+        "--swiper-pagination-bullet-horizontal-gap": "10px"
+    }}
 
     >
       {pictures.map((e, index)=> (
