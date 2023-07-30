@@ -1,6 +1,6 @@
 # Kasa-React-projet
 
-Debut du proje : 11 juillet 2023
+Debut du projet : 11 juillet 2023
 
 Fin du projet 30 juillet 2023
 
